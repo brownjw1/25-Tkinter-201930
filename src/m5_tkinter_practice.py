@@ -17,27 +17,44 @@ def main():
     #   ** make a window that shows up. **
     # -------------------------------------------------------------------------
 
+
     root = tkinter.Tk()
     frame1 = ttk.Frame(root, padding=20)
     frame1.grid()
     button1= ttk.Button(frame1, text='Click Me')
-    button1.grid()
     button1['command'] = (lambda: printer())
     button1.grid()
 
     entry1 = ttk.Entry(frame1)
-    entry1.grid()
     button2 = ttk.Button(frame1, text='Click Me')
-    button2.grid()
     button2['command'] = (lambda: printer2(entry1))
     button2.grid()
 
     entry2 = ttk.Entry(frame1)
-    entry2.grid()
     button3 = ttk.Button(frame1, text='Click Me')
-    button3.grid()
     button3['command'] = (lambda: printer3(entry1,entry2))
     button3.grid()
+
+    button1Label = ttk.Label(frame1, text="Hello")
+    button2Label = ttk.Label(frame1, text="Hello vs Goodbye")
+    button3Label = ttk.Label(frame1, text="Big Thing")
+    entry1Label = ttk.Label(frame1, text="Type something")
+    entry2Labal= ttk.Label(frame1, text="Type a number here")
+
+
+
+    button1Label.grid(row=0,column=0)
+    button2Label.grid(row=0,column=2)
+    button3Label.grid(row=0,column=4)
+    button2Label.grid(row=0,column=2)
+    entry1Label.grid(row=1,column=0)
+    entry2Labal.grid(row=1,column=3)
+    button1.grid(row=0,column=1)
+    button2.grid(row=0,column=3)
+    button3.grid(row=0,column=5)
+    entry1.grid(row=1,column=1)
+    entry2.grid(row=1,column=4)
+
 
 
     root.mainloop()
@@ -86,7 +103,7 @@ def printer3(entryBox1,entryBox2):
     # -------------------------------------------------------------------------
 
     # -------------------------------------------------------------------------
-    # TODO: 7.
+    # DONE: 7.
     #    -- Put a second Entry on the Frame.
     #    -- Put a third Button on the frame.
     #    -- Make this new Button respond to a button-press as follows:
