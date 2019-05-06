@@ -17,6 +17,8 @@ def main():
     # For every grid() method call you will add a row and a column argument
     # -------------------------------------------------------------------------
 
+#JUST MAKE THIS PRETTY BY CHANGING THE ROWS AND COLUMNS!!!!!!!!!
+
     root = tkinter.Tk()
     root.title("MQTT Remote")
 
